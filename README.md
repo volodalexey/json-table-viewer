@@ -1,5 +1,7 @@
 # JSON viewer as table view
 
+# [DEMO](https://volodalexey.github.io/json-table-viewer/)
+
 JSON file should contain Array od Object:
 ```json
 [
