@@ -20,6 +20,7 @@ export function App() {
   return (
     <>
       <FileInput setRawData={setRawData} />
+      <span>Total: [{parsedData.data.length}]</span>
       <Table parsedData={parsedData} />
     </>
   );
