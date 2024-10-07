@@ -9,6 +9,7 @@ import { TableBodyRow } from "../../entities/table-body-row/TableBodyRow";
 import { TableBodyCell } from "../../entities/table-body-cell/TableBodyCell";
 import { SortButton } from "../../features/sort-button/SortButton";
 import { TSortSetting, sortData } from "../../features/sort-button/sort";
+import { anyToString } from "@/shared/lib/anyToString";
 
 type Props = {
   parsedData: TTransformed;
@@ -42,7 +43,7 @@ export function Table({ parsedData }: Props) {
         {sortData({ parsed: parsedData, activeSorts }).map((d, idx) => (
           <TableBodyRow key={idx}>
             {Object.entries(d).map(([key, value]) => (
-              <TableBodyCell key={key}>{value}</TableBodyCell>
+              <TableBodyCell key={key}>{anyToString(value)}</TableBodyCell>
             ))}
           </TableBodyRow>
         ))}
